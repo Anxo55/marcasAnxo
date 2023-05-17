@@ -1,0 +1,84 @@
+body {
+  margin: 40px;
+}
+.header{
+  grid-area: header;
+}
+.footer{
+  grid-area: footer;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.content {
+  grid-area: content;
+}
+.aside1{
+  grid-area: aside1;
+}
+.aside2{
+  grid-area: aside2;
+}
+.aside3{
+  grid-area: aside3;
+}
+.nav{
+  grid-area: nav;
+}
+
+.wrapper {
+     width: 80%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(14, 75px);
+    grid-template-areas:
+               "nav    nav     nav"
+               "header header  header"
+               "header header  header"
+               "sidebar content content"
+               "sidebar content content"
+               "sidebar content content"
+               "sidebar content content"
+               "sidebar content content"
+               "sidebar content content"
+               "sidebar content content"
+               "aside1  aside2  aside3"
+               "aside1  aside2  aside3"
+               "aside1  aside2  aside3"
+               "footer  footer  footer";
+
+    background-color: #fff;
+    color: #444;
+  }
+.box {
+  background-color: #444;
+  color: #fff;
+  padding: 10px;
+  font-size: 150%;
+}
+.header{
+  background-color: pink;
+}
+.footer{
+  background-color: grey;
+}
+.sidebar {
+  background-color: darkblue;
+}
+
+.content {
+  background-color: lightblue;
+}
+.aside1{
+  background-color: red;
+}
+.aside2{
+  background-color: green;
+}
+.aside3{
+  background-color: purple;
+}
+.nav{
+  background-color: yellow;
+}

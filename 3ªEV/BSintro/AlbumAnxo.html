@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="../assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>Album example · Bootstrap v5.3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+          crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+         color: black;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+    
+      .btn-primary , .btn-secondary {
+        color: black;
+      }
+
+      .card-body{
+        background-color: gray;
+      }
+      p{
+        color: white;
+      }
+      
+      .text-body-secondary{
+        color: white;
+      }
+
+      img{
+        width: 100%;
+        height: 255px;
+      }
+
+      p1{
+        color: black;
+      }
+
+      main{
+        background-image: url(https://www.solofondos.com/wp-content/uploads/2015/11/fondo2.jpg);
+      }
+      
+    </style>
+
+    
+  </head>
+  <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+    
+<header data-bs-theme="dark">
+  <div class="collapse text-bg-dark" id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4>Acerca de</h4>
+          <p class="text-body-secondary">Os presentamos CamposAgency, CamposAgency se trata de una agencia de viajes que se acaba de crear recientemente y podeis en varios lugares de vuestras ciudades. Como podeis obsevar, otorgamos grandes viajes a muy buen precio, donde esa no será vuestra preocupacion. Aprovecha y toma 5 minutos de tu tiempo para ver y disfrutar de esta, nuestra pagina web.</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <h4>Contacto</h4>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white">Siguenos en Twitter</a></li>
+            <li><a href="#" class="text-white">Danos Me gusta en Facebook</a></li>
+            <li><a href="#" class="text-white">Nuestro email</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-dark bg-dark shadow-sm">
+    <div class="container">
+      <a href="#" class="navbar-brand d-flex align-items-center">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="me-2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+        <strong>Album</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Agencia de viajes</h1>
+        <p1 class="lead text-body-secondar">En nuestra pagina web encontrareis varios lugares turísticos, en los cuales disfrutareis de unas buenas vacaciones tanto en familia como con amigos.
+            <br>Corre y adquiere un viaje y disfruta de la experiencia y conoce nuevos sitios.</p1>
+        <p>
+          <a href="#" class="btn btn-secondary my-2">Accion principal</a>
+          <a href="#" class="btn btn-secondary my-2">Accion secundaria</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3  row-cols-lg-4 g-3 ">
+        <div class="col">
+          <div class="card shadow-sm">
+           <img src="imagenes2/90adcf77-867b-4047-99ca-c33dbf367ac4_BIG+LAS+VEGAS+PICTURE.webp" alt="">
+            <div class="card-body">
+              <p class="card-text">Los Angeles</br> Los Ángeles, es una de las ciudades más bonitas y mas túristica de los ultimos años. Pinche en el enlace y acceda a más informacion y observe nuestros precios.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline"><a href="https://www.tripadvisor.es/SmartDeals-g32655-Los_Angeles_California-Hotel-Deals.html">Más Informacion</a></button>
+                  <button type="button" class="btn btn-sm btn-outline">Editar Viaje</button>
+                </div>
+                <small class="text-body">Los Angeles</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="imagenes2/Paris.webp" alt="">
+            <div class="card-body">
+              <p class="card-text">Paris</br> Paris, o más conocida como "la ciudad del amor", es una de las ciudades más bonitas y mas túristica de los ultimos años. Pinche en el enlace y acceda a más informacion y observe nuestros precios.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline"><a href="https://www.tripadvisor.es/SmartDeals-g187147-Paris_Ile_de_France-Hotel-Deals.html">Más Informacion</a></button>
+                  <button type="button" class="btn btn-sm btn-outline">Editar Viaje</button>
+                </div>
+                <small class="text-body">Paris</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+           <img src="imagenes2/Qué-ver-en-Londres.jpg" alt="">
+            <div class="card-body">
+              <p class="card-text">Londres</br> Londres, es una de las ciudades más bonitas y mas túristica de los ultimos años. Pinche en el enlace y acceda a más informacion y obserrve nuestros precios.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline"><a href="https://www.edreams.es/vuelos/londres/LON/?mktportal=google&utm_id=go_cmp-15950883827_adg-129768126142_ad-579309766555_dsa-1610002598765_dev-c_ext-39531230762_locphy-1005518_mtype-_ntw-g&gclid=CjwKCAjwl6OiBhA2EiwAuUwWZXavFptOO2zyOeRZ1KL2HKA6r6ZIO1d7roZJsPazkLWt48x_3_wwiRoCwKcQAvD_BwE">Más Informacion</a></button>
+                  <button type="button" class="btn btn-sm btn-outline">Editar Viaje</button>
+                </div>
+                <small class="text-body">Londres</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="imagenes2/caption.jpg" alt="">
+            <div class="card-body">
+              <p class="card-text">Madrid</br> Madrid, es una de las ciudades más bonitas y mas túristica de los ultimos años. Pinche en el enlace y acceda a más informacion y observe nuestros precios.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline"><a href="https://www.edreams.es/vuelos/madrid/MAD/?mktportal=google&utm_id=go_cmp-15950883824_adg-129768118982_ad-649788829343_kwd-1555359731_dev-c_ext-_locphy-1005518_mtype-e_ntw-g&gclid=CjwKCAjwl6OiBhA2EiwAuUwWZaUdq3WmdwGylRjC1WvitZ2dR2sY58j5h_67Q3xp69U-pSnQzxM6hRoCv7MQAvD_BwE#/">Más Informacion</a></button>
+                  <button type="button" class="btn btn-sm btn-outline">Editar Viaje</button>
+                </div>
+                <small class="text-body">Madrid</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="imagenes2/castillo-edimburgo.webp" alt="">
+            <div class="card-body">
+              <p class="card-text">Castillo de Edimburgo</br> Los Ángeles, es una de las ciudades más bonitas y mas túristica de los ultimos años. Pinche en el enlace y acceda a más informacion y observe nuestros precios.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline"><a href="https://www.logitravel.com/grandes-viajes/europa/reino-unido/escocia/?amc=aff.logitravel.51239.60011.40497.11594637810%26112664599883%26e%26ofertas%20escocia%26c%26kwd-2347636060&utm_campaign=S-LG-ES-CIR-REG-Escocia_(CON:EU_COU:GB_TYP:S_ID:472402,1)&utm_id=4&gclid=CjwKCAjwl6OiBhA2EiwAuUwWZYeESvVPFPsH-L4M3Jy31s-6I5w1XOncLJ_7UZCAjPTvz6bKCfGpQRoCQpoQAvD_BwE">Más Informacion</a></button>
+                  <button type="button" class="btn btn-sm btn-outline">Editar Viaje</button>
+                </div>
+                <small class="text-body">Castillo de Edimburgo</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="imagenes2/SYD_header.jpg" alt="">
+            <div class="card-body">
+              <p class="card-text">Australia</br> Australia, es una de las ciudades más bonitas y mas túristica de los ultimos años. Pinche en el enlace y acceda a más informacion y observe nuestros precios.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline"><a href="https://hanaley.com/viajes-a-medida/oceania/australia/?gclid=CjwKCAjwl6OiBhA2EiwAuUwWZZL5TqtAG9Q_Kb7Pm1_RviXRPtZjgJrCuQeeWrq99JxgryyLD6uI7BoC4_8QAvD_BwE&hsa_acc=9455691052&hsa_ad=628345595510&hsa_cam=17865954419&hsa_grp=139635870899&hsa_kw=viaje%20a%20australia&hsa_mt=e&hsa_net=adwords&hsa_src=g&hsa_tgt=kwd-1734782580&hsa_ver=3&utm_campaign=ES_ESP_S_Australia_106&utm_medium=ppc&utm_source=adwords&utm_term=viaje%20a%20australia">Más Informacion</a></button>
+                  <button type="button" class="btn btn-sm btn-outline">Editar Viaje</button>
+                </div>
+                <small class="text-body">Australia</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="imagenes2/fe87ed4472778a06a1de9acdb902fc67-1623261344.webp" alt="">
+            <div class="card-body">
+              <p class="card-text">Ibiza</br> Ibiza, es una de las ciudades más bonitas y mas túristica de los ultimos años. Pinche en el enlace y acceda a más informacion y observe nuestros precios.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline"><a href="https://www.booking.com/region/es/ibiza.es.html?aid=376633;label=ibiza-srrGz2Dakth66AfPRXiuKAS410805192179:pl:ta:p1:p2:ac:ap:neg:fi:tikwd-450850312:lp1005518:li:dec:dm:ppccp=UmFuZG9tSVYkc2RlIyh9YYriJK-Ikd_d6t9ru1RaAQM;ws=&gclid=CjwKCAjwl6OiBhA2EiwAuUwWZSAh17sHVrFSGtoWOnurRXtp-Z6e0qTHi9hfC-pcE9gY7sUrEM41QBoCpVIQAvD_BwE">Más Informacion</a></button>
+                  <button type="button" class="btn btn-sm btn-outline">Editar Viaje</button>
+                </div>
+                <small class="text-body">Ibiza</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="imagenes2/brasil-1-e1566159470787.jpg" alt="">
+            <div class="card-body">
+              <p class="card-text">Rio de Janeiro</br> Rio de Janeiro, es una de las ciudades más bonitas y mas túristica de los ultimos años. Pinche en el enlace y acceda a más informacion y observe nuestros precios.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline"><a href="https://hanaley.com/viajes-a-medida/sudamerica/brasil/?gclid=CjwKCAjwl6OiBhA2EiwAuUwWZQnriqiuyTFRQyNRFF7S0PDF0rbQ08wkGa9kBjn9iLIXy3HOV10KbBoCGxQQAvD_BwE&hsa_acc=9455691052&hsa_ad=628345595417&hsa_cam=17438913747&hsa_grp=134810354782&hsa_kw=viaje%20a%20brasil&hsa_mt=e&hsa_net=adwords&hsa_src=g&hsa_tgt=kwd-679399179&hsa_ver=3&utm_campaign=ES_ESP_S_Brasil_92&utm_medium=ppc&utm_source=adwords&utm_term=viaje%20a%20brasil">Más Informacion</a></button>
+                  <button type="button" class="btn btn-sm btn-outline">Editar Viaje</button>
+                </div>
+                <small class="text-body">Rio de Janeiro</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="imagenes2/media-file-3915-panoramica-de-roma-italia.jpg" alt="">
+            <div class="card-body">
+              <p class="card-text">Italia</br> Italia, es una de las ciudades más bonitas y mas túristica de los ultimos años. Pinche en el enlace y acceda a más informacion y observe nuestros precios.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline"><a href="https://www.logitravel.com/grandes-viajes/europa/italia/?amc=aff.logitravel.51239.60011.40497.11594635089&140649620792&e&vacaciones%20italia&c&kwd-126387209&utm_campaign=S-LG-ES-CIR-COU-Italia_(CON:EU_COU:IT_TYP:S_ID:536879,1)&utm_id=4&gclid=CjwKCAjwl6OiBhA2EiwAuUwWZeP0SkYakhO9AB1auK0CgjjApC92nHpTyMLabZmT-NdvQad5cJ77gxoCRkwQAvD_BwE">Más Informacion</a></button>
+                  <button type="button" class="btn btn-sm btn-outline">Editar Viaje</button>
+                </div>
+                <small class="text-body">Italia</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer class="text-body-secondary py-5">
+  <div class="container">
+    <p class="float-end mb-1">
+      <a href="#">Volver al principio</a>
+    </p>
+
+    <p1 class="mb-1">Esta es nuestra pagina web donde podreis conseguir los mejore viajes!!</p1>
+    <p1 class="mb-0">Cualquier duda contactenos a nuestro email: <a href="http://mail.google.com/mail?hl=es">CamposAgency@hotmail.com</a> , o a nuestro telefono: <a href="">883475927</a> .</p1>
+  </div>
+</footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+            crossorigin="anonymous"></script>
+
+      
+  </body>
+</html>

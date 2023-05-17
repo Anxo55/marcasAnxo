@@ -1,0 +1,70 @@
+body {
+  margin: 40px;
+}
+.header{
+  grid-area: header;
+}
+.footer{
+  grid-area: footer;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.main{
+  grid-area: main;
+}
+
+
+.wrapper {
+    width: 80%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 75px);
+    grid-template-areas:
+               "header header  header header"
+               "...... main   main  ......"
+               "...... main   main  ......"
+               "...... main   main   ......"
+               "...... main   main   ......"
+               "footer  footer  footer  footer";
+    border: 3px solid grey;
+  }
+  .content {
+  grid-area: content;
+}
+.twin1{
+  grid-area: twin1;
+}
+.twin2{
+  grid-area: twin2;
+}
+.main {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 75px);
+    grid-template-areas:
+               "content content  content sidebar"
+               "content content  content sidebar"
+               "twin1 twin1   twin2  twin2"
+               "twin1 twin1   twin2  twin2";
+  }
+.box {
+  margin: 1px;
+  font-size: 150%;
+}
+.header{
+  background-color: lightblue;
+}
+.footer{
+  background-color: blue;
+}
+.sidebar {
+  background-color: purple;
+}
+.content {
+  background-color: green;
+}
+.twin1, .twin2{
+  background-color: orange;
+}

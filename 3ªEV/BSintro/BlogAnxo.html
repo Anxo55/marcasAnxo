@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+  <head><script src="../assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.111.3">
+    <title>Yelmo Cines Vialia</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/blog/">
+
+    
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .portada{
+        background-image: url(imagenes3/Cartelera-gratuito-San-Juan-Aznalfarache_1585651704_140364351_667x375.png);
+         width: 1300px;
+        height: 340px; 
+      }
+
+      .link-secondary{
+        color: black;
+      }
+      .marco{
+        background-color: blanchedalmond;
+      }
+     
+       body{
+        background-color: beige;
+      } 
+
+       img{
+        height: 250px;
+        width: 200px;
+      } 
+
+     
+
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="check2" viewBox="0 0 16 16">
+        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+      </symbol>
+      <symbol id="circle-half" viewBox="0 0 16 16">
+        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
+      </symbol>
+      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
+        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
+      </symbol>
+      <symbol id="sun-fill" viewBox="0 0 16 16">
+        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </symbol>
+    </svg>
+
+    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+              id="bd-theme"
+              type="button"
+              aria-expanded="false"
+              data-bs-toggle="dropdown"
+              aria-label="Toggle theme (auto)">
+        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+            Light
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+            Dark
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+        <li>
+          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+            <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+            Auto
+            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+  <div class="marco">
+    <div class="container">
+      <header class="blog-header lh-1 py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a class="link-secondary" href="#">Encuentra el mejor precio en Taquilla.com</a>
+          </div>
+          <div class="col-4 text-center">
+            <a class="blog-header-logo text-body-emphasis" href="#">Yelmo Cines Vialia</a>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="link-secondary" href="#" aria-label="Search">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg><p>Pelicula/cine</p>
+            </a>
+            <a class="btn btn-sm btn-outline-text-secondary" href="#">Iniciar Sesión</a>
+          </div>
+        </div> 
+    </header>
+  </div>
+
+  <div class="nav-scroller py-1 mb-2">
+    <nav class="nav d-flex justify-content-between">
+      <a class="p-2 link-secondary" href="#">El rey leon</a>
+      <a class="p-2 link-secondary" href="#">Ralph</a>
+      <a class="p-2 link-secondary" href="#">Malefica</a>
+      <a class="p-2 link-secondary" href="#">Toy Story 4</a>
+      <a class="p-2 link-secondary" href="#">Aladin</a>
+      <a class="p-2 link-secondary" href="#">Coco</a>
+      <a class="p-2 link-secondary" href="#">bella y la bestia</a>
+      <a class="p-2 link-secondary" href="#">Frozen II</a>
+      <a class="p-2 link-secondary" href="#">Onward</a>
+      <a class="p-2 link-secondary" href="#">Venom</a>
+      <a class="p-2 link-secondary" href="#">Fast & Furious</a>
+      <a class="p-2 link-secondary" href="#">Tadeo Jones</a>
+    </nav>
+  </div>
+</div>
+
+<main class="container">
+  <div class="portada">
+    <div class="p-4 p-md-5 mb-4 rounded text-bg">
+      <div class="col-md-6 px-0">
+        <h1 class="display-4 fst-italic">.</h1>
+        <p class="lead my-3">.</p>
+        <p class="lead mb-0"><a href="#" class="text-white fw-bold">.</a></p>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="tamañoMarco">
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-body-secondary">Proximamente...</strong>
+            <h3 class="mb-0">Super Mario Bros</h3>
+            <div class="mb-1 text-body-secondary">Nov 12</div>
+                   
+            <p class="card-text mb-auto">Mario bros es una película de acción basada en los videojuegos originales de NINTENDO.</p>
+            <a href="https://es.wikipedia.org/wiki/Super_Mario_Bros.:_La_pel%C3%ADcula" class="stretched-link" target="_blank">Más Informacion... </a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="imagenes3/pelicula-super-mario-bros-la-pelicula.jpg" alt="">  
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-body-secondary">Proximamente...</strong>
+            <h3 class="mb-0">Avatar II</h3>
+            <div class="mb-1 text-body-secondary">Nov 11</div>
+            
+            <p class="mb-auto"> Es una película estadounidense perteneciente al género del cine épico, ciencia ficción y animación.</p>
+            <a href="https://es.wikipedia.org/wiki/Avatar:_The_Way_of_Water" class="stretched-link" target="_blank">Más Informacion...</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="imagenes3/Avatar_El_sentido_del_agua-722646748-large.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row g-5">
+    <div class="col-md-8">
+      <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        
+      </h3>
+
+      <article class="blog-post">
+        
+        <h2 class="blog-post-title mb-1">Peliculas mas destacadas del mes:</h2>
+        <br>
+
+        <h3 class="blog-post-title mb-1">El rey leon</h3>
+        <a href="https://www.disney.es/peliculas/el-rey-leon" target="_blank"> <img src="imagenes3/A1lKl4tH4GL.jpg" alt="El_rey_leon"> </a>
+        <br>
+        <br>
+        <p>El rey leon es una pelicula que se desarolló y salió por primera vez en el año 1994, actualmente crearon la versión original, la cual fue un exito en todo el mundo, ya que fue una de las mas taquilleras del momento.</p>
+        <hr>
+        <p>A su vez actualmente fue la película más taquillera del momento, ya que era una de las mas esperadas del año, que la gente la había pedido tiempo atras.</p>
+        <hr>
+        <p>A tenido un total de 200 millones de ventas en todos nuestros cines a nivel mundial y eso es de muy buen agrado.</p>
+
+        <h3 class="blog-post-title mb-1">Toy Story 4</h3>
+        <a href="https://www.disney.es/peliculas/toy-story-4" target="_blank"> <img src="imagenes3/Toy_Story_4-462756582-large.jpg" alt="toy_story_4"> </a>
+        <br>
+        <br>
+        <p>Toy Story 4 junto al resto de la saga, fue de las mejores peliculas de animacion, enfocada a los jovenes.</p>
+        <hr>
+        <p>Esta película, fue un gran estreno, ya que veniamos de varias películas bastante buenas, sobre todo encontramos un gran trabajo en el desarollo de esta última, por lo que incitó y llamó tanto al público para verla en su estreno.</p>
+        <hr>
+        <p>El día de salida de la película encontramos que los cines estaban repletos tanto de jovenes como de personas mayores, o de padres con hijos. Además hubo muy buena critica en la primera tanda de personas, lo que hizo que esto le llegara a nmas personas.</p>
+
+        <h3 class="blog-post-title mb-1">Bella y Bestia</h3>
+        <a href="https://www.disneyplus.com/es-es/movies/la-bella-y-la-bestia/3oEh78YRc9VN" target="_blank"> <img src="imagenes3/256507.jpg" alt="bella_y_bestia"> </a>
+        <br>
+        <br>
+        <p>La bella y la bestia fue una película que nació años atras enfocado al publico infantil, por aquel entonces no había un gran desarollo como el que tenemos actualmente, por ellos encontramos este nuevo formato de lapelícula</p>
+        <hr>
+        <p>Tras el anuncio de la salida de la película, mucha gente fue corriendo para comprar su entrada anticipada, ya que era tal excitación, que la gente no podía esperar un instante más sin tener su entrada.</p>
+        <hr>
+        <p>El día de su estreno fue genial, todas las salas llenas y a rebosar, con todas las personas con ganas de que la película empezara, pero deseando por dentro que no llegase a su fin</p>
+
+        <h3 class="blog-post-title mb-1">Malefica</h3>
+        <a href="https://www.disney.es/peliculas/malefica-maestra-del-mal" target="_blank"> <img src="imagenes3/5710130.webp" alt="malefica"> </a>
+        <br>
+        <br>
+        <p>Malefica fue uno de los mayores exitos en cuanto al cine actual, nadie se imaginaba que fuesen a encontrar una película con estas caracteristicas, pero tanto esfuerzo dio su fruto, los creadores comentaron el duro trabajo para su desarollo, y el tiempo y trabajo empleado en la misma</p>        
+        <hr>
+        <p>Todos quedaron sorprendidos con los graficos y el buen trabajo de los actores, como todos estaban metidos en la piel del personaje y como disfrutaban de cada escena que pasaba</p>
+        <hr>
+        <p>Todos los espectadores quedaron asombrados ante tal película, de la cual hubo una muy buena critica, y de donde los desrolladores sacaron muy buenas cosas de cara un futuro, para nuevos y grandes proyectos</p>
+        
+  </div>
+
+</main>
+
+<footer class="blog-footer">
+  <p>Pagina creada por <a href="https://yelmocines.es/">Yelmo Cines</a> y <a href="https://www.nintendo.com/">Movies</a>.</p>
+  <p>
+    <a href="#">Volver al principio</a>
+  </p>
+</footer>
+
+
+    
+  </body>
+</html>
