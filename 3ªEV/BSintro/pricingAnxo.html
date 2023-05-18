@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.111.3">
-    <title>Pricing example · Bootstrap v5.3</title>
+    <title>Pricing Anxo Campos</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/pricing/">
 
@@ -86,12 +86,37 @@
       .bd-mode-toggle {
         z-index: 1500;
       }
-       body{
-        background-color: black;
-      } 
+      body {
+      margin: 0;
+      background-color: black;
+    }
 
-      
-    </style>
+    .caja {
+      width: 200px;
+      height: 900px;
+      border: 1px solid #ccc;
+      margin: 10px;
+    }
+
+    .izquierda {
+      position: fixed;
+      left: 10px;
+      top: 10px;
+    }
+
+    .derecha {
+      position: fixed;
+      right: 10px;
+      top: 10px;
+    }
+
+    /* Agregar estilos de transición */
+    .page-transition {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+</style>
 
     
     <!-- Custom styles for this template -->
@@ -156,68 +181,96 @@
     </div>
   </header>
 
+  <!--Cajas laterales donde se incluye mas informacion-->
+  <div class="caja izquierda"></div>
+  <div class="caja derecha"></div>
+
   <main>
-  
-    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" >
-      <div class="col" onmouseover="this.style.transform = 'scale(1.1)';" onmouseout="this.style.transform = 'scale(1)';">
-        <div class="card mb-4 rounded-3 shadow-sm" style="background-color: gray;">
-          <div class="card-header py-3" style="background-color: red;">
-            <h4 class="my-0 fw-normal">Estandar</h4>
-          </div>
-          <div class="card-body" style="transition: transform 0.3s ease-in-out;">
-            <h1 class="card-title pricing-card-title">24,99€<small class="text-body-secondary fw-light">/mes</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>10 users included</li>
-              <li>2 GB of storage</li>
-              <li>Email support</li>
-              <li>Help center access</li>
-            </ul>
-            <button type="button" class="w-100 btn btn-lg" style="border: 1px solid black;">Adquirir</button>
-          </div>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col justify-content-start">
+          <a href="pricingAnxo2.html" class="text-decoration-none" onclick="openPage(event)">
+            <div class="card mb-4 rounded-3 shadow-sm" style="background-color: gray;">
+              <div class="card-header py-3" style="background-color: red;">
+                <h4 class="my-0 fw-normal text-body-secondary">Estandar</h4>
+              </div>
+              <div class="card-body" style="transition: transform 0.3s ease-in-out;">
+                <h1 class="card-title pricing-card-title">24,99€<small class="text-body-secondary fw-light">/mes</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li class="text-body-secondary">10 users included</li>
+                  <li class="text-body-secondary">2 GB of storage</li>
+                  <li class="text-body-secondary">Email support</li>
+                  <li class="text-body-secondary">Help center access</li>
+                </ul>
+                <a href="pricingAnxo2.html" class="w-100 btn btn-lg" style="border: 1px solid black;">Adquirir</a>
+              </div>
+            </div>
+          </a>
         </div>
-      </div>
-
-      <div class="col" onmouseover="this.style.transform = 'scale(1.1)';" onmouseout="this.style.transform = 'scale(1)';">
-        <div class="card mb-4 rounded-3 shadow-sm" style="background-color: gray;">
-          <div class="card-header py-3" style="background-color: red;">
-            <h4 class="my-0 fw-normal">Pro</h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">34,99€<small class="text-body-secondary fw-light">/mes</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>20 users included</li>
-              <li>10 GB of storage</li>
-              <li>Priority email support</li>
-              <li>Help center access</li>
-            </ul>
-            <button type="button" class="w-100 btn btn-lg" style="border: 1px solid black;">Adquirir</button>
-          </div>
+    
+        <div class="col justify-content-center">
+          <a href="pricingAnxo3.html" class="text-decoration-none" onclick="openPage(event)">
+            <div class="card mb-4 rounded-3 shadow-sm" style="background-color: gray;">
+              <div class="card-header py-3" style="background-color: red;">
+                <h4 class="my-0 fw-normal text-body-secondary">Pro</h4>
+              </div>
+              <div class="card-body" style="transition: transform 0.3s ease-in-out;">
+                <h1 class="card-title pricing-card-title">34,99€<small class="text-body-secondary fw-light">/mes</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li class="text-body-secondary">10 users included</li>
+                  <li class="text-body-secondary">2 GB of storage</li>
+                  <li class="text-body-secondary">Email support</li>
+                  <li class="text-body-secondary">Help center access</li>
+                </ul>
+                <a href="pricingAnxo2.html" class="w-100 btn btn-lg" style="border: 1px solid black;">Adquirir</a>
+              </div>
+            </div>
+          </a>
         </div>
-      </div>
-
-      <div class="col" onmouseover="this.style.transform = 'scale(1.1)';" onmouseout="this.style.transform = 'scale(1)';">
-        <div class="card mb-4 rounded-3 shadow-sm" style="background-color: gray;">
-          <div class="card-header py-3 text" style="background-color: red;">
-            <h4 class="my-0 fw-normal">Ultimate</h4>
-          </div>
-          <div class="card-body">
-            <h1 class="card-title pricing-card-title">49,99€<small class="text-body-secondary fw-light">/mes</small></h1>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>30 users included</li>
-              <li>15 GB of storage</li>
-              <li>Phone and email support</li>
-              <li>Help center access</li>
-            </ul>
-            <button type="button" class="w-100 btn btn-lg"style="border: 1px solid black;" >Adquirir</button>
-          </div>
+    
+        <div class="col justify-content-end">
+          <a href="pricingAnxo4.html" class="text-decoration-none" onclick="openPage(event)">
+            <div class="card mb-4 rounded-3 shadow-sm" style="background-color: gray;">
+              <div class="card-header py-3" style="background-color: red;">
+                <h4 class="my-0 fw-normal text-body-secondary">Ultimate</h4>
+              </div>
+              <div class="card-body" style="transition: transform 0.3s ease-in-out;">
+                <h1 class="card-title pricing-card-title">49,99€<small class="text-body-secondary fw-light">/mes</small></h1>
+                <ul class="list-unstyled mt-3 mb-4">
+                  <li class="text-body-secondary">10 users included</li>
+                  <li class="text-body-secondary">2 GB of storage</li>
+                  <li class="text-body-secondary">Email support</li>
+                  <li class="text-body-secondary">Help center access</li>
+                </ul>
+                <a href="pricingAnxo2.html" class="w-100 btn btn-lg" style="border: 1px solid black;">Adquirir</a>
+              </div>
+            </div>
+          </a>
         </div>
       </div>
     </div>
+    
+    <script>
+      function openPage(event) {
+        event.preventDefault();
+        const url = event.currentTarget.getAttribute('href');
+        const transitionDelay = 500; // Tiempo de transición en milisegundos
+    
+        // Agregar una clase para animar la transición
+        document.body.classList.add('page-transition');
+    
+        // Esperar la duración de la transición y redirigir a la URL
+        setTimeout(() => {
+          window.location.href = url;
+        }, transitionDelay);
+      }
+    </script>
 
     <h2 class="display-6 text-center mb-4" style="color: white; text-shadow: 4px 4px 4px gray;">Beneficio de los planes</h2>
 
     <div class="table-responsive">
-      <table class="table text-center">
+      <table class="table text-center" style="color: white;">
         <thead style="color: white;">
           <tr>
             <th style="width: 34%;"></th>
