@@ -86,12 +86,10 @@
       .bd-mode-toggle {
         z-index: 1500;
       }
-      body{
-       background-color: violet;
-      }
-      th{
-        /* color: white; */
-      }
+       body{
+        background-color: black;
+      } 
+
       
     </style>
 
@@ -128,31 +126,38 @@
 
 <div class="container py-3">
   <header>
-    <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+    <div class="d-flex flex-column flex-md-row lg-8 align-items-center pb-3 mb-4 border-bottom" style="background-color: black;">
       <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
-        <a href=""><img src="princing/Logo-Netflix.png" alt="logo-netflix"></a>
+        <a href="https://www.netflix.com/" target="_blank"><img src="princing/Logo-Netflix.png" alt="logo-netflix"></a>
         <span class="fs-4"></span>
       </a>
 
       <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#" style="color: black;">Features </a>
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#" style="color: black;">Enterprise</a>
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#" style="color: black;">Support</a>
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#" style="color: black;">Pricing</a>
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#" style="border: 1px solid white;">Español</a>
-        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#" style="background-color: red; border-radius: 15px;">Iniciar sesión</a>
-
-
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#" style="color: white;">Inicio </a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#" style="color: white;">Contactanos</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#" style="color: white;">Más información</a>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="#" style="color: white;">Novedades</a>
+        <div class="idioma me-3 py-2 link-body-emphasis text-decoration-none">
+          <label for="seleccionIdioma">Idioma:</label>
+          <select id="seleccionIdioma">
+            <option value="es">Español</option>
+            <option value="fr">Francés</option>
+            <option value="en">Inglés</option>
+            <option value="it">Italiano</option>
+          </select>
+        </div>
+        <a class="me-3 py-2 link-body-emphasis text-decoration-none" href="https://www.netflix.com/es/login" target="_blank" style="background-color: red; border-radius: 15px;">Iniciar sesión</a>
       </nav>
     </div>
 
     <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
-      <h1 class="display-4 fw-normal" style="color: black;">Planes</h1>
-      <p class="fs-5" style="color: black;">A continuación encontrareis diversas ofertas para adquirir netflix y donde a continuacion os mostraremos los beneficios de cada plan y que podreis adquirir.</p>
+      <h1 class="display-4 fw-normal" style="color: white; text-shadow: 5px 5px 5px gray;">Planes</h1>
+      <p class="fs-5" style="color: white; text-shadow: 5px 5px 5px gray;">A continuación encontrareis diversas ofertas para adquirir netflix y donde a continuacion os mostraremos los beneficios de cada plan y que podreis adquirir.</p>
     </div>
   </header>
 
   <main>
+  
     <div class="row row-cols-1 row-cols-md-3 mb-3 text-center" >
       <div class="col" onmouseover="this.style.transform = 'scale(1.1)';" onmouseout="this.style.transform = 'scale(1)';">
         <div class="card mb-4 rounded-3 shadow-sm" style="background-color: gray;">
@@ -209,11 +214,11 @@
       </div>
     </div>
 
-    <h2 class="display-6 text-center mb-4" style="color: white;">Beneficio de los planes</h2>
+    <h2 class="display-6 text-center mb-4" style="color: white; text-shadow: 4px 4px 4px gray;">Beneficio de los planes</h2>
 
     <div class="table-responsive">
       <table class="table text-center">
-        <thead>
+        <thead style="color: white;">
           <tr>
             <th style="width: 34%;"></th>
             <th style="width: 22%;">Estandar</th>
@@ -223,28 +228,28 @@
         </thead>
         <tbody>
           <tr>
-            <th scope="row" class="text-start">Public</th>
+            <th scope="row" class="text-start">Anuncios</th>
             <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#"/></svg></td>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#"/></svg></td>
           </tr>
           <tr>
-            <th scope="row" class="text-start">Private</th>
-            <td></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <th scope="row" class="text-start">Graficos</th>
+            <td><p>1080</p></td>
+            <td><p>1440</p></td>
+            <td><p>2160</p></svg></td>
           </tr>
         </tbody>
 
         <tbody>
           <tr>
-            <th scope="row" class="text-start">Permissions</th>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
+            <th scope="row" class="text-start">Compartir Cuenta</th>
+            <td><svg class="bi" width="24" height="24"><use xlink:href="#"/></svg></td>
             <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
             <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
           </tr>
           <tr>
-            <th scope="row" class="text-start">Sharing</th>
+            <th scope="row" class="text-start">Estrenos</th>
             <td></td>
             <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
             <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
@@ -255,25 +260,19 @@
             <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
             <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
           </tr>
-          <tr>
-            <th scope="row" class="text-start">Extra security</th>
-            <td></td>
-            <td></td>
-            <td><svg class="bi" width="24" height="24"><use xlink:href="#check"/></svg></td>
-          </tr>
         </tbody>
       </table>
     </div>
   </main>
 
-  <footer class="pt-4 my-md-5 pt-md-5 border-top">
+  <footer class="pt-4 my-md-5 pt-md-5 border-top" style="background-color: black;">
     <div class="row">
-      <div class="col-12 col-md">
-        <img class="mb-2" src="../assets/brand/bootstrap-logo.svg" alt="" width="24" height="19">
-        <small class="d-block mb-3 text-body-secondary">&copy; 2017–2023</small>
-      </div>
+        <div class="col-12 col-md d-flex justify-content-center align-items-center">
+           <a href="#"> <img class="mb-2" src="princing/casa-roja-ocupada.png" alt="" width="75" height="75" style="object-fit: contain; background-color: black;"></a>
+        </div>
+
       <div class="col-6 col-md">
-        <h5>Contactanos</h5>
+        <h5 style="color: white;">Contactanos</h5>
         <ul class="list-unstyled text-small">
           <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Cool stuff</a></li>
           <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Random feature</a></li>
@@ -284,7 +283,7 @@
         </ul>
       </div>
       <div class="col-6 col-md">
-        <h5>Empresas</h5>
+        <h5 style="color: white;">Empresas</h5>
         <ul class="list-unstyled text-small">
           <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource</a></li>
           <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Resource name</a></li>
@@ -293,7 +292,7 @@
         </ul>
       </div>
       <div class="col-6 col-md">
-        <h5>Acerca de</h5>
+        <h5 style="color: white;">Acerca de</h5>
         <ul class="list-unstyled text-small">
           <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Team</a></li>
           <li class="mb-1"><a class="link-secondary text-decoration-none" href="#">Locations</a></li>
