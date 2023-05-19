@@ -3,93 +3,56 @@
 <head>
   <title>Botón Circular</title>
   <style>
+    /* Estilos CSS */
     body {
-      background: linear-gradient(#1a0039, #330033);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      background-image: url(princing/City.jpg);
     }
     
     .button {
       width: 100px;
       height: 100px;
-      background-color: #8a2387;
+      background-color: black;
       border-radius: 50%;
       display: flex;
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      transition: background-color 0.3s ease;
+      transition: opacity 0.5s ease;
       text-decoration: none;
+      opacity: 1;
     }
     
     .button:hover {
-      background-color: #e94057;
-    }
-    
-    .button a {
-      text-decoration: none;
-      color: inherit;
-    }
-    
-    /* Animación de desvanecimiento */
-    @keyframes fadeOut {
-      0% {
-        opacity: 1;
-      }
-      100% {
-        opacity: 0;
-      }
-    }
-    
-    /* Animación de aparición */
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-    
-    /* Clase para activar la transición */
-    .fade-transition {
-      animation-duration: 0.5s;
-    }
-    
-    /* Clase para activar la aparición */
-    .fade-in-transition {
-      animation-duration: 0.5s;
-      animation-delay: 0.5s;
+      opacity: 0.5;
     }
   </style>
   <script>
-    // Función para activar la transición y cargar la nueva página mediante AJAX
+    // Función para realizar la transición y cargar el siguiente HTML
     function handleButtonClick(event) {
       event.preventDefault();
-      const link = event.currentTarget;
-      const url = link.getAttribute('href');
+      const button = event.currentTarget;
+      button.style.opacity = '0';
       
-      // Añadir la clase para activar el desvanecimiento
-      link.classList.add('fade-transition');
-      
-      // Retrasar la carga de la nueva página para permitir la animación de desvanecimiento
       setTimeout(() => {
-        // Añadir la clase para activar la aparición
-        link.classList.add('fade-in-transition');
-        
-        // Cargar la página mediante AJAX
-        setTimeout(() => {
-          window.location.href = url;
-        }, 500); // Retraso de 500ms para permitir que se muestre la animación de aparición
-      }, 500); // Retraso de 500ms para permitir que se muestre la animación de desvanecimiento
+        window.location.href = 'pricingAnxo.html';
+      }, 500);
     }
   </script>
 </head>
 <body>
-  <a href="pricingAnxo.html" class="button fade-transition fade-in-transition" onclick="handleButtonClick(event)">
-    <p>Pulsa Aquí</p>
+  <a href="pricingAnxo.html" class="button" onclick="handleButtonClick(event)">
+    <img src="princing/Logo-de-Netflix-3.jpg" alt="Logo-de-Netflix-3" height="100px" width="100px">
   </a>
 </body>
 </html>
+
+
+
+
+
+
+
