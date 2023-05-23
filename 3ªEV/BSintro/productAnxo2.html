@@ -16,6 +16,7 @@
     
 
 <link href="bootstrap.min.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <style>
       .bd-placeholder-img {
@@ -102,6 +103,14 @@
         padding: 0;
   }
 
+        .box {
+            transition: transform 0.3s;
+          }
+
+          .box:hover {
+            transform: scale(1.1);
+          }
+
       /* main{
         background-image: url(product2/FC_Barcelona_wallpaper_logo-1920x1200.jpg);
       } */
@@ -160,204 +169,336 @@
     </div> 
        
 <!-- Cajas de 2 -->
-  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-    <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 py-3">
-        <h2 class="display-5">Another headline</h2>
-        <p class="lead">And an even wittier subheading.</p>
-      </div>
-      <div class="bg-body-tertiary shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/ter-stegen.png" alt="ter-stegen" width="300px" height="350px"></div>
+<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3" >
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/11072/marc-andre-ter-stegen" target="_blank">
+  <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 py-3">
+      <h2 class="display-5">Marc Andre Ter Stegen</h2>
+      <p class="lead">Primer portero.</p>
     </div>
-    <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 p-3">
-        <h2 class="display-5">Another headline</h2>
-        <p class="lead">And an even wittier subheading.</p>
-      </div>
-      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/iñaki-peña.jpg" alt="iñaki-peña" width="350px" height="350px"></div>
-    </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/ter-stegen.png" alt="ter-stegen" width="300px" height="350px"></div>
   </div>
+  </a>
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/53621/ignacio-pena-sotorres" target="_blank">
+  <div class="text-bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Iñaki peña</h2>
+      <p class="lead">Segundo portero.</p>
+    </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/iñali-peña.png" alt="iñaki-peña" width="350px" height="400px"></div>
+  </div>
+  </a>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $(".box").hover(
+      function() {
+        $(this).css("transform", "scale(1.1)");
+      },
+      function() {
+        $(this).css("transform", "scale(1)");
+      }
+    );
+  });
+</script>
 
 <!-- Cajas de 3 -->
   <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+    <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/66133/ronald-araujo" target="_blank">
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
       <div class="my-3 p-3">
-        <h2 class="display-5">Another headline</h2>
-        <p class="lead">And an even wittier subheading.</p>
+        <h2 class="display-5">Ronald Araujo</h2>
+        <p class="lead">Central/Lateral.</p>
       </div>
-      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/ronald-araujo.png" alt="ronald-araujo" height="250px"></div>
+      <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/ronald-araujo.png" alt="ronald-araujo" height="250px"></div>
     </div>
-    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/marcos-alonso.png" alt="marcos-alonso" height="250px"></div>
+    </a>
+    <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/4093/marcos-alonso" target="_blank">
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+      <div class="my-3 p-3">
+        <h2 class="display-5">Marcos Alonso</h2>
+        <p class="lead">Lateral Izquierdo.</p>
       </div>
-      <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/andreas-christensen.png" alt="andreas-christensen" height="250px"></div>
+      <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/marcos-alonso.png" alt="marcos-alonso" height="250px"></div>
+    </div>
+    </a>
+    <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/4495/andreas-christensen" target="_blank">
+    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+      <div class="my-3 p-3">
+        <h2 class="display-5">Andreas Christensen</h2>
+        <p class="lead">Central.</p>
       </div>
+      <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/andreas-christensen.png" alt="andreas-christensen" height="250px"></div>
+    </div>
+    </a>
   </div>
 
-  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 p-3">
-        <h2 class="display-5">Another headline</h2>
-        <p class="lead">And an even wittier subheading.</p>
-      </div>
-      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/jordi-alba.png" alt="jordi-alba" height="250px"></div>
-    </div>
-    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/jules-kounde.png" alt="jules-kounde" height="250px"></div>
-      </div>
-      <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/eric-garcia.webp" alt="eric-garcia" height="250px"></div>
-      </div>
-  </div>
+  <script>
+    $(document).ready(function() {
+      $(".box").hover(
+        function() {
+          $(this).css("transform", "scale(1.1)");
+        },
+        function() {
+          $(this).css("transform", "scale(1)");
+        }
+      );
+    });
+  </script>
 
-  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 p-3">
-        <h2 class="display-5">Another headline</h2>
-        <p class="lead">And an even wittier subheading.</p>
-      </div>
-      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/sergio-busquets.png" alt="sergio-busquets" height="250px"></div>
+<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/4958/jordi-alba" target="_blank">
+  <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Jordi Alba</h2>
+      <p class="lead">Lateral Izquierdo.</p>
     </div>
-    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/pedri.png" alt="pedri" height="250px"></div>
-      </div>
-      <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/kessie.jpg" alt="kessie" height="250px"></div>
-      </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/jordi-alba.png" alt="jordi-alba" height="250px"></div>
   </div>
-
-  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 p-3">
-        <h2 class="display-5">Another headline</h2>
-        <p class="lead">And an even wittier subheading.</p>
-      </div>
-      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/sergi-roberto.jpg" alt="sergi-roberto" height="250px"></div>
+  </a>
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/15552/jules-kounde" target="_blank">
+  <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Jules Kounde</h2>
+      <p class="lead">Central/Lateral.</p>
     </div>
-    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/frenkie-de-jong.webp" alt="frenkie-de-jong" height="250px"></div>
-      </div>
-      <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/gavi.png" alt="gavi" height="250px"></div>
-      </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/jules-kounde.png" alt="jules-kounde" height="250px"></div>
   </div>
-
-  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 p-3">
-        <h2 class="display-5">Another headline</h2>
-        <p class="lead">And an even wittier subheading.</p>
-      </div>
-      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/ousmane-dembele.png" alt="ousmane-dembele" height="250px"></div>
+  </a>
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/24635/eric-garcia" target="_blank">
+  <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Eric Garcia</h2>
+      <p class="lead">Central.</p>
     </div>
-    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/robert-lewandowski.png" alt="robert-lewandowski" height="250px"></div>
-      </div>
-      <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/ansu-fati.png" alt="ansu-fati" height="250px"></div>
-      </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/eric-garcia.webp" alt="eric-garcia" height="250px"></div>
   </div>
+  </a>
+</div>
 
-  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
-    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-      <div class="my-3 p-3">
-        <h2 class="display-5">Another headline</h2>
-        <p class="lead">And an even wittier subheading.</p>
-      </div>
-      <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/ferran-torres.png" alt="ferran-torres" height="250px"></div>
+<script>
+  $(document).ready(function() {
+    $(".box").hover(
+      function() {
+        $(this).css("transform", "scale(1.1)");
+      },
+      function() {
+        $(this).css("transform", "scale(1)");
+      }
+    );
+  });
+</script>
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/4963/sergio-busquets" target="_blank">
+  <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Sergio Busquets</h2>
+      <p class="lead">Mediocentro Defensivo.</p>
     </div>
-    <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5">Another headline</h2>
-          <p class="lead">And an even wittier subheading.</p>
-        </div>
-        <div class="bg-dark shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/rapinha.png" alt="rapinha" height="250px"></div>
-      </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/sergio-busquets.png" alt="sergio-busquets" height="250px"></div>
+  </div>
+  </a>
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/70486/pedro-gonzalez-lopez" target="_blank">
+  <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Pedri</h2>
+      <p class="lead">Centrocampista.</p>
+    </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/pedri.png" alt="pedri" height="250px"></div>
+  </div>
+  </a>
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/22865/franck-kessie" target="_blank">
+  <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Franck Kessie</h2>
+      <p class="lead">Mediocentro Defensivo.</p>
+    </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/kessie.jpg" alt="kessie" height="250px"></div>
+  </div>
+  </a>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $(".box").hover(
+      function() {
+        $(this).css("transform", "scale(1.1)");
+      },
+      function() {
+        $(this).css("transform", "scale(1)");
+      }
+    );
+  });
+</script>
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/4969/sergi-roberto" target="_blank">
+  <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Sergi Roberto</h2>
+      <p class="lead">Centrocampista/Lateral.</p>
+    </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/sergi-roberto.jpg" alt="sergi-roberto" height="250px"></div>
+  </div>
+  </a>
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/16291/frenkie-de-jong" target="_blank">
+  <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Frenkie De Jong</h2>
+      <p class="lead">Centrocampista/Media Punta.</p>
+    </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/frenkie-de-jong.webp" alt="frenkie-de-jong" height="250px"></div>
+  </div>
+  </a>
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/116719/pablo-martin-paez-gavira" target="_blank">
+  <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">"Gavi"</h2>
+      <p class="lead">Centrocampista.</p>
+    </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/gavi.png" alt="gavi" height="250px"></div>
+  </div>
+  </a>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $(".box").hover(
+      function() {
+        $(this).css("transform", "scale(1.1)");
+      },
+      function() {
+        $(this).css("transform", "scale(1)");
+      }
+    );
+  });
+</script>
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/19780/ousmane-dembele" target="_blank">
+  <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Ousmane Dembele</h2>
+      <p class="lead">Extremos Derecho/Izquierdo.</p>
+    </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/ousmane-dembele.png" alt="ousmane-dembele" height="250px"></div>
+  </div>
+  </a>
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/5109/robert-lewandowski" target="_blank">
+  <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Robert Lewandowski</h2>
+      <p class="lead">Delantero Centro.</p>
+    </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/robert-lewandowski.png" alt="robert-lewandowski" height="250px"></div>
+  </div>
+  </a>
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/66735/anssumane-fati-vieira" target="_blank">
+  <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Ansu Fati</h2>
+      <p class="lead">Extremo Izquierdo.</p>
+    </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/ansu-fati.png" alt="ansu-fati" height="250px"></div>
+  </div>
+  </a>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $(".box").hover(
+      function() {
+        $(this).css("transform", "scale(1.1)");
+      },
+      function() {
+        $(this).css("transform", "scale(1)");
+      }
+    );
+  });
+</script>
+
+<div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/43098/ferran-torres" target="_blank">
+  <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Ferran Torres</h2>
+      <p class="lead">Extremo Derecho/Delantero Centro.</p>
+    </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/ferran-torres.png" alt="ferran-torres" height="250px"></div>
+  </div>
+  </a>
+  <a href="https://www.fcbarcelona.es/es/futbol/primer-equipo/jugadores/24156/raphael-dias-belloli" target="_blank">
+  <div class="bg-body-tertiary me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden box" style="background: linear-gradient(45deg, #004d98, #a50044);">
+    <div class="my-3 p-3">
+      <h2 class="display-5">Rapinha</h2>
+      <p class="lead">Extremos Derecho.</p>
+    </div>
+    <div class="shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;"><img src="product2/rapinha.png" alt="rapinha" height="250px"></div>
+  </div>
+  </a>
+</div>
+
+<script>
+  $(document).ready(function() {
+    $(".box").hover(
+      function() {
+        $(this).css("transform", "scale(1.1)");
+      },
+      function() {
+        $(this).css("transform", "scale(1)");
+      }
+    );
+  });
+</script>
 
 </main>
 
 <footer class="container py-5">
   <div class="row">
     <div class="col-12 col-md">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
-      <small class="d-block mb-3 text-body-secondary">&copy; 2017–2023</small>
+      <a class="py-2" href="#" aria-label="Product">
+        <img src="product2/FC_Barcelona_logo_logotipo_crest.png" alt="FC_Barcelona_logo_logotipo_crest" width="50px" height="50px">
+      </a>
     </div>
     <div class="col-6 col-md">
-      <h5>Features</h5>
+      <h5>Porteros</h5>
       <ul class="list-unstyled text-small">
-        <li><a class="link-secondary" href="#">Cool stuff</a></li>
-        <li><a class="link-secondary" href="#">Random feature</a></li>
-        <li><a class="link-secondary" href="#">Team feature</a></li>
-        <li><a class="link-secondary" href="#">Stuff for developers</a></li>
-        <li><a class="link-secondary" href="#">Another one</a></li>
-        <li><a class="link-secondary" href="#">Last time</a></li>
+        <li><a class="link-secondary" href="#">Ter Stegen</a></li>
+        <li><a class="link-secondary" href="#">Iñaki Peña</a></li>
       </ul>
     </div>
     <div class="col-6 col-md">
-      <h5>Resources</h5>
+      <h5>Defensas</h5>
       <ul class="list-unstyled text-small">
-        <li><a class="link-secondary" href="#">Resource name</a></li>
-        <li><a class="link-secondary" href="#">Resource</a></li>
-        <li><a class="link-secondary" href="#">Another resource</a></li>
-        <li><a class="link-secondary" href="#">Final resource</a></li>
+        <li><a class="link-secondary" href="#">Ronald Araujo</a></li>
+        <li><a class="link-secondary" href="#">Marcos Alonso</a></li>
+        <li><a class="link-secondary" href="#">Andreas Christensen</a></li>
+        <li><a class="link-secondary" href="#">Jordi Alba</a></li>
+        <li><a class="link-secondary" href="#">Jules Kounde</a></li>
+        <li><a class="link-secondary" href="#">Eric Garcia</a></li>
       </ul>
     </div>
     <div class="col-6 col-md">
-      <h5>Resources</h5>
+      <h5>Centrocampistas</h5>
       <ul class="list-unstyled text-small">
-        <li><a class="link-secondary" href="#">Business</a></li>
-        <li><a class="link-secondary" href="#">Education</a></li>
-        <li><a class="link-secondary" href="#">Government</a></li>
-        <li><a class="link-secondary" href="#">Gaming</a></li>
+        <li><a class="link-secondary" href="#">Sergio Busquets</a></li>
+        <li><a class="link-secondary" href="#">Pedri</a></li>
+        <li><a class="link-secondary" href="#">Franck Kessie</a></li>
+        <li><a class="link-secondary" href="#">Sergi Roberto</a></li>
+        <li><a class="link-secondary" href="#">Frenkie De Jong</a></li>
+        <li><a class="link-secondary" href="#">Gavi</a></li>
       </ul>
     </div>
     <div class="col-6 col-md">
-      <h5>About</h5>
+      <h5>Delanteros</h5>
       <ul class="list-unstyled text-small">
-        <li><a class="link-secondary" href="#">Team</a></li>
-        <li><a class="link-secondary" href="#">Locations</a></li>
-        <li><a class="link-secondary" href="#">Privacy</a></li>
-        <li><a class="link-secondary" href="#">Terms</a></li>
+        <li><a class="link-secondary" href="#">Ousmane Dembele</a></li>
+        <li><a class="link-secondary" href="#">Robert Lewandowski</a></li>
+        <li><a class="link-secondary" href="#">Ansu Fati</a></li>
+        <li><a class="link-secondary" href="#">Ferran Torres</a></li>
+        <li><a class="link-secondary" href="#">Rapinha</a></li>
       </ul>
     </div>
   </div>
