@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="imagenes/logo-lyoko-negro.jpg" />
+    <title>Menu Codigo LYoko</title>
+    <style>
+        body {
+            background-image: url(imagenes/fondo-menu.jpg);
+            background-color: #000;
+            opacity: 0;
+            animation: fadeInBackground 2s forwards;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        @keyframes fadeInBackground {
+            to {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid green;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            opacity: 0;
+            animation: fadeInBox 2s forwards;
+        }
+
+        @keyframes fadeInBox {
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>Historia</h2>
+        </div>
+
+        <div class="box">
+            <h2>Personajes</h2>
+        </div>
+
+        <div class="box">
+            <h2>Xana</h2>
+        </div>
+    </div>
+</body>
+
+</html>
