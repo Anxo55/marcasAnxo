@@ -45,6 +45,15 @@
             margin: 10px;
             opacity: 0;
             animation: fadeInBox 2s forwards;
+            transition: transform 0.3s ease-out;
+        }
+
+        .box:hover {
+            transform: scale(1.1);
+        }
+
+        .box a {
+            text-decoration: none;
         }
 
         @keyframes fadeInBox {
@@ -57,17 +66,21 @@
 
 <body>
     <div class="container">
-        <div class="box">
-            <h2>Historia</h2>
-        </div>
-
-        <div class="box">
-            <h2>Personajes</h2>
-        </div>
-
-        <div class="box">
-            <h2>Xana</h2>
-        </div>
+        <a href="Historia.html" class="box-link" style="text-decoration: none;" >
+            <div class="box" >
+                <h2 style="color: black;">Historia</h2>
+            </div>
+        </a>
+        <a href="Personajes.html" class="box-link" style="text-decoration: none;">
+            <div class="box">
+                <h2 style="color: black;">Personajes</h2>
+            </div>
+        </a>
+        <a href="Xana.html" class="box-link" style="text-decoration: none;">
+            <div class="box">
+                <h2 style="color: red;">Xana</h2>
+            </div>
+        </a>
     </div>
 </body>
 

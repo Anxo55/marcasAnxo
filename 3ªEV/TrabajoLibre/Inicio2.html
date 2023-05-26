@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="imagenes/logo-lyoko-negro.jpg" />
-    <title>Codigo LYoko</title>
+    <title>Codigo Lyoko</title>
     <style>
         body {
             background-image: url(imagenes/Inicio-lyoko.gif);
@@ -53,6 +53,8 @@
             color: green;
             margin-top: 20px;
         }
+
+        
     </style>
     <script>
         function validateForm() {
@@ -79,13 +81,27 @@
 
             return false; // Evita el envío del formulario por defecto
         }
+
+        function moveOnKeyword(event) {
+            var inputText = event.target.value;
+            var lowerCaseText = inputText.toLowerCase();
+            
+            if (lowerCaseText.includes("accediendoal sistema")) {
+                var form = document.getElementById("login-form");
+                form.style.animation = "zoomInOut 1s alternate infinite";
+            }
+            else {
+                var form = document.getElementById("login-form");
+                form.style.animation = "";
+            }
+        }
     </script>
 </head>
 
 <body>
     <form id="login-form" onsubmit="return validateForm()">
         <label for="username" style="color: green;">Usuario:</label>
-        <input type="text" id="username" name="username"><br><br>
+        <input type="text" id="username" name="username" onkeyup="moveOnKeyword(event)"><br><br>
 
         <label for="password" style="color: green;">Contraseña:</label>
         <input type="password" id="password" name="password"><br><br>
